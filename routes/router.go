@@ -1,7 +1,7 @@
 package routes
 
 import (
-	hanlders "its_wasnt_me/handlers"
+	handlers "its_wasnt_me/handlers"
 	"net/http"
 
 	"github.com/gorilla/mux"
@@ -17,11 +17,11 @@ func SetupRouter() *mux.Router {
 	}).Methods("GET")
 
 	// Endpoint principal
-	r.HandleFunc("/generar-meme", hanlders.GenerateMeme).Methods("POST")
+	r.HandleFunc("/generar-meme", handlers.GenerateMeme).Methods("POST")
 
 	//
-	r.PathPrefix("/genio-responde").Handler(
-		http.StripPrefix("/genio-responde", http.FileServer(http.Dir("genio_responde"))),
+	r.PathPrefix("/genio_responde").Handler(
+		http.StripPrefix("/genio_responde", http.FileServer(http.Dir("genio_responde"))),
 	)
 	return r
 }

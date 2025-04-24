@@ -1,0 +1,35 @@
+# Go binary files
+/bin/
+/build/
+*.exe
+*.out
+*.test
+
+# Logs
+*.log
+
+# Temporary files
+*.tmp
+*.swp
+*.bak
+*.pid
+
+# Dependency directories
+/vendor/
+
+# IDE settings
+.vscode/
+.idea/
+*.iml
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+
+# Docker-related files
+.dockerignore
+docker-compose.yml
+
+# Environment variables
+.env

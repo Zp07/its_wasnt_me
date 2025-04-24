@@ -1,9 +1,9 @@
-package hanlders
+package handlers
 
 import (
 	"encoding/json"
-	"net/http"
 	"its_wasnt_me/services"
+	"net/http"
 )
 
 type PromptRequest struct {
@@ -28,4 +28,3 @@ func GenerateMeme(w http.ResponseWriter, r *http.Request) {
 	json.NewEncoder(w).Encode(map[string]string{"image_path": path})
 
 }
-
